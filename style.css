@@ -1,0 +1,481 @@
+/* ==========================================================================
+   RESET E VARIÁVEIS DE DESIGN
+   ========================================================================== */
+:root {
+  /* Cores Principais (Gradiente Moderno: Navy, Roxo e Ciano) */
+  --bg-dark: #0a0f1d;
+  --bg-card-dark: #131b2e;
+  --bg-light: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --text-light: #f8fafc;
+  
+  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #6366f1 50%, #8b5cf6 100%);
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --whatsapp-color: #25d366;
+  
+  /* Sombra e Transições */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* ==========================================================================
+   CABEÇALHO & HERO
+   ========================================================================== */
+.header {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 30px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.developer-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-nav a {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  margin-left: 20px;
+  transition: var(--transition);
+}
+
+.social-nav a:hover {
+  color: var(--accent-cyan);
+  transform: translateY(-3px);
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-purple);
+  color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-purple);
+  color: #fff;
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE & CERTIFICADOS
+   ========================================================================== */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.certificate-card {
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--accent-purple);
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   MERCHAN & BENEFÍCIOS
+   ========================================================================== */
+.benefits-section {
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.benefits-section .section-title {
+  color: #fff;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  color: #94a3b8;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: var(--bg-card-dark);
+  border: 1px solid #1e293b;
+  position: relative;
+}
+
+.benefit-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.benefit-card h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.benefit-card p {
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   PORTFÓLIO (CSS GRID RESPONSIVO: 3 COLUNAS DESKTOP)
+   ========================================================================== */
+.portfolio-section {
+  background: var(--bg-light);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 50px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Colunas no Desktop */
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+  transition: var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.thumb-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Proporção 1:1 (Quadrada) */
+  background: #cbd5e1;
+  overflow: hidden;
+}
+
+.portfolio-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.portfolio-card:hover .portfolio-thumb {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   PREÇOS & MENSALIDADES
+   ========================================================================== */
+.payment-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.pricing-intro {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-plan {
+  border: 2px solid var(--accent-purple);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plan-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-features i {
+  color: var(--whatsapp-color);
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 60px 0 30px 0;
+  text-align: center;
+}
+
+.stat-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #94a3b8;
+  border-left: 4px solid var(--accent-cyan);
+  padding-left: 20px;
+  text-align: left;
+}
+
+.footer-contact {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE WHATSAPP (CANTO INFERIOR DIREITO)
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--whatsapp-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Configurado para ficar acima, mas sem ocultar a leitura central */
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE-FIRST BREAKPOINTS)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Colunas em Tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 Coluna em Dispositivos Móveis */
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-quote {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+  }
+}
